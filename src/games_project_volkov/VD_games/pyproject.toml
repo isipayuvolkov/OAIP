@@ -1,0 +1,18 @@
+[project]
+name = "games-project-volkov"
+version = "0.1.0"
+description = "Мой проект"
+dependencies = []
+requires-python = ">=3.10"
+
+[project.scripts]
+# ВНИМАНИЕ: Тут мы пишем твой длинный путь
+VD_games = "games_project_volkov.src.games_project_volkov.VD_games.scripts.VD_main:main"
+
+[tool.hatch.build.targets.wheel]
+# И тут тоже указываем длинный путь до папки src
+packages = ["games_project_volkov/src/games_project_volkov"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
